@@ -18,6 +18,9 @@ services:
     container_name: redis_cache
     ports:
       - "6379:6379"
+    volumes:
+      - redis_data:/data   # ✅ added Redis volume
 
 volumes:
   postgres_data:
+  redis_data:              # ✅ define Redis volume
